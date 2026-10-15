@@ -15,9 +15,12 @@ public class patrollcalculator {
         System.out.println(", whats your hourly pay?");
         float paid = myScanner.nextFloat();
         System.out.println(paid + "$ Wow, thats even worse");
-        float total = hworked * paid;
+        //float total = hworked * paid;
         //System.out.println("You make " + total + "$ a week, just give up");
         //%s =String %f = float/double
+        //System.out.printf("Well, %s You make $%.2f a week, just give up", name, total);
+        float overtimeHours = Math.max(0, hworked - 40);
+        float total = (hworked * paid) + (overtimeHours * paid * 0.5f);
         System.out.printf("Well, %s You make $%.2f a week, just give up", name, total);
 
 
